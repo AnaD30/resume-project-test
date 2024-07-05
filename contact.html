@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script nonce="pKKtPgbSJL97X9qR" type="text/javascript"
-        src="//self.adblockultimate.net/manager.js?tm=1719996192&amp;lg=true"
+        src="//self.adblockultimate.net/manager.js?tm=1720160490&amp;lg=true"
         guid="{F92C0FF2-7A32-43B3-B1D0-AE3092149B5A}" inwhitelist="false" status="true" autohide="true"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         type="text/css" />
@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+           (function() {
+            emailjs.init("user_ayySh9-2zlZiwdmo0");
+            emailjs.send("gmail", "template_tycuiim", {
+                name: "Aaron",
+                notes: "The project that I want is..."
+            })
+        })();
+    </script>
+
     <title>Rosie</title>
 </head>
 
@@ -61,7 +73,7 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
                         <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
                             required />
@@ -141,6 +153,7 @@
             </div>
         </div>
     </footer>
+    <script scr="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
